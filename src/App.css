@@ -1,38 +1,71 @@
+/* App.css */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    text-align: center;
+    padding: 5px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .picture {
+    position: relative; /* Make sure the position is relative to position the overlay correctly */
+    background-image: url('../public/background.webp'); /* Make sure to update the path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures it covers the full viewport height */
+    border-radius: 25px; /* Adds rounded corners */
+    margin: 5px;
+    overflow: hidden; /* Ensures content does not overflow the rounded corners */
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Add the dark overlay */
+  .picture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+    border-radius: 20px; /* Match the border-radius of the parent */
+    z-index: 1; /* Ensure the overlay is on top */
   }
-}
+  
+  .navbar-custom, .hero-custom {
+    position: relative;
+    z-index: 2; /* Ensure the navbar and hero are above the overlay */
+    background: transparent; /* Ensure backgrounds are transparent */
+  }
+  
+  /* Navbar.css */
+  .custom-toggler {
+    border: none;
+    background: none;
+  }
+  
+  .custom-toggler .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+  }
+  
+  .custom-toggler .line {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+  }
+  
+  .custom-toggler.open .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .custom-toggler.open .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .custom-toggler.open .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* Additional styling as needed */
+  

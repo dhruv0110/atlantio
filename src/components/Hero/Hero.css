@@ -1,0 +1,99 @@
+/* Hero.css */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the left */
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+}
+
+.hero .all-info {
+  text-align: left; /* Ensure text is aligned to the left */
+  margin-top: 55px;
+}
+
+.hero .all-info span{
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.53);
+  font-weight: 600;
+}
+
+.hero .outer-font p {
+  text-align: left; /* Ensure text is aligned to the left */
+  color: white;
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 5.5rem;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.hero .outer-font {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero .icon {
+  display: flex;
+  flex-direction: column; /* Arrange icons in a column by default */
+  gap: 2rem; /* Adjust the gap between icons */
+  margin-left: 1.5rem; /* Add margin to the left of icons */
+  font-size: 1.3rem;
+}
+
+.hero .icon i {
+  color: #fff; /* Adjust icon color as needed */
+}
+.play-video{
+  display: flex;
+  align-items: center;
+}
+.video .play-video i{
+  font-size: 20px;
+}
+
+span.text.mx-2{
+  color: rgba(255, 255, 255, 0.807);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+  .hero .outer-font p {
+    text-align: left; /* Ensure text is aligned to the left */
+    color: white;
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 5.5rem;
+  }
+  .play-video{
+    margin-top: 15px;
+   }
+}
+@media (max-width: 768px) {
+  .hero .outer-font p {
+    text-align: left; /* Ensure text is aligned to the left */
+    color: white;
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 3.5rem;
+  }
+  .play-video{
+   margin-top: 15px;
+  }
+}
+@media (max-width: 1000px) {
+  .hero .icon {
+    flex-direction: row; /* Arrange icons in a row on smaller screens */
+    align-items: center; /* Align icons in the center horizontally */
+    gap: 2rem; /* Adjust the gap between icons in the row */
+    margin-left: 0; /* Remove left margin on smaller screens */
+  }
+}

@@ -1,0 +1,172 @@
+/* Navbar.css */
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white; /* Example color for navbar links */
+}
+
+.logo {
+  max-height: 50px; /* Adjust the max height of your logo */
+}
+
+/* Custom hamburger menu styles */
+.custom-toggler {
+  cursor: pointer;
+  padding: 3;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.me-auto .shadow{
+  border-radius: 40px;
+  padding: 14px 20px;
+}
+.me-auto .shadow1{
+  background-color: rgba(128, 128, 128, 0.251);
+  border-radius: 40px;
+  padding: 14px 20px;
+}
+
+.me-auto .shadow:hover{
+  background-color: rgba(128, 128, 128, 0.251);
+  border-radius: 40px;
+  padding: 14px 20px;
+}
+
+.custom-toggler .hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+}
+
+.me-auto {
+  gap: 0.5rem;
+}
+
+.custom-toggler .line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.custom-toggler.open .line:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.custom-toggler.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.custom-toggler.open .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.pricing {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-separator {
+  height: 1px;
+  width: 100%; /* Adjust width to match content width */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.388);
+}
+.nav-separator-bottom{
+  height: 1px;
+  width: 100%; /* Adjust width to match content width */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.388);
+}
+
+.contacts {
+  background-color: rgb(247, 75, 69);
+  padding: 14px 20px;
+  color: white;
+  border: 2px solid rgb(240, 129, 125);
+  border-radius: 40px;
+}
+
+.price {
+  background-color: transparent;
+  padding: 14px 20px;
+  color: white;
+  border: none;
+  border-radius: 40px;
+}
+
+.price:hover {
+  background-color: rgba(128, 128, 128, 0.251);
+  padding: 14px 20px;
+  color: white;
+  border: none;
+  border-radius: 40px;
+}
+
+/* Centering logo on large screens */
+@media (min-width: 992px) {
+  .navbar-brand.d-none.d-lg-block {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    background-color: rgb(247, 75, 69);
+    padding: 8px 5px;
+    color: white;
+    border: 2px solid rgb(240, 129, 125);
+    border-radius: 40px;
+  }
+  
+  .price {
+    background-color: transparent;
+    padding: 8px 5px;
+    color: white;
+    border: none;
+    border-radius: 40px;
+  }
+  
+  .price:hover {
+    background-color: rgba(128, 128, 128, 0.251);
+    padding: 8px 5px;
+    color: white;
+    border: none;
+    border-radius: 40px;
+  }
+  .me-auto.navbar-nav{
+    margin-top: 15px;
+  }
+  .nav-separator-bottom{
+    margin-top: 50px;
+    background-color: white;
+  }
+}
+@media (max-width:350px) {
+  .contacts {
+    background-color: rgb(247, 75, 69);
+    padding: 8px 2px;
+    color: white;
+    border: 2px solid rgb(240, 129, 125);
+    border-radius: 40px;
+  }
+}
+
+/* Light white line below the navbar */
+.navbar-custom {
+  background: transparent; /* Ensure navbar background is transparent */
+  border: none; /* Optional: Remove any border if needed */
+  padding: 20px 30px; /* Adjust the padding if needed */
+}
