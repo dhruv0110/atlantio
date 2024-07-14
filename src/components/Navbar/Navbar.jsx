@@ -14,7 +14,7 @@ const Navbars = ({ className }) => {
 
   return (
     <>
-      <Navbar expand="lg" className={`navbar-dark ${className}`} expanded={expanded} style={{ padding: "25px 30px" }}>
+      <Navbar expand="lg" id="nav" className={`navbar-dark ${className}`} expanded={expanded} >
         <Container>
           <Navbar.Brand href="#home" className="d-none d-lg-block mx-auto">
             <Image src="./Logo.svg" alt="Logo" className="logo" />
@@ -24,7 +24,7 @@ const Navbars = ({ className }) => {
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
-            style={{borderRadius:"50%",border:"none"}}
+            style={{borderRadius:"50%"}}
             onClick={handleToggle}
             className={`custom-toggler ${expanded ? 'open' : ''}`}
           >
@@ -43,9 +43,9 @@ const Navbars = ({ className }) => {
               <Nav.Link href="#about" className='shadow'>About</Nav.Link>
               <div className="nav-separator mb-2"></div>
             </Nav>
-            <div className="pricing mt-3">
+            <div className="pricing">
               <button className='price'>Pricing & Plans</button>
-              <button className='contacts mx-2'>Contact Us</button>
+              <button className='contacts'>Contact Us</button>
             </div>
           </Navbar.Collapse>
         </Container>

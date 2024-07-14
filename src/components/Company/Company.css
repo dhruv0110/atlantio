@@ -1,0 +1,23 @@
+.c-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+.c-icon svg {
+    width: 82px;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .c-icon svg {
+        flex: 1 1 calc(33.33% - 10px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .c-icon svg {
+        flex: 1 1 calc(50% - 10px);
+    }
+}

@@ -3,31 +3,41 @@
     text-align: center;
     padding: 5px;
   }
+
+  .containers{
+    width: 63%;
+    margin: auto;
+  }
   
+
   .picture {
-    position: relative; /* Make sure the position is relative to position the overlay correctly */
-    background-image: url('../public/background.webp'); /* Make sure to update the path */
+    position: relative;
+    background-image: url('../public/background.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh; /* Ensures it covers the full viewport height */
-    border-radius: 25px; /* Adds rounded corners */
-    margin: 5px;
-    overflow: hidden; /* Ensures content does not overflow the rounded corners */
-  }
-  
-  /* Add the dark overlay */
-  .picture::before {
+    height: 37.5rem;
+    border-radius: 18px;
+    margin: 2px 35px;
+    overflow: hidden;
+}
+
+/* Add the dark overlay */
+.picture::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
-    border-radius: 20px; /* Match the border-radius of the parent */
-    z-index: 1; /* Ensure the overlay is on top */
-  }
+    z-index: 1;
+    border-radius: 18px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 1) 25%, transparent),
+                linear-gradient(to left, rgba(0, 0, 0, 0.45) 5%, rgba(0, 0, 0, 0.5) 20%, transparent);
+}
+
+
+
   
   .navbar-custom, .hero-custom {
     position: relative;
@@ -68,4 +78,13 @@
   }
   
   /* Additional styling as needed */
-  
+  @media (max-width: 1400px) {
+    .picture {
+        margin: auto; /* Margin for full screen (or large screens) */
+    }
+}
+@media (max-width: 1000px) {
+  .containers{
+    width: 100%;
+  }
+}
